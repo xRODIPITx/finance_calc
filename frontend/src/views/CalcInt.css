@@ -1,0 +1,54 @@
+.CalcInt {
+  min-height: calc(100vh - 70px - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  max-width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+.CalcInt input {
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 10px;
+  border-color: #242424;
+  border-style: solid;
+}
+
+.CalcInt button {
+  padding: 8px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #242424;
+  color: white;
+  margin: 1em;
+}
+
+.CalcInt p {
+  text-align: center;
+  font-size: x-large;
+}
+
+.CalcInt button:hover {
+  background-color: #3f3f3f;
+  transition: all 0.1s;
+}
+
+.CalcInt button:active {
+  background-color: #2e2e2e;
+  transition: all 0.1s;
+}
+
+@media (max-width: 768px) {
+  .CalcInt {
+    width: 300px;
+  }
+
+  .CalcInt p {
+    font-size: larger;
+  }
+}

@@ -1,0 +1,81 @@
+.AdminPanel {
+  min-height: calc(100vh - 70px - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+.AdminPanel input {
+  margin-bottom: 15px;
+  padding: 5px;
+  border-radius: 10px;
+  border-color: #242424;
+  border-style: solid;
+  width: 285px;
+  margin: 1em;
+}
+
+.AdminPanel button {
+  padding: 8px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #242424;
+  color: white;
+  width: 300px;
+  margin-bottom: 1em;
+}
+
+.AdminPanel p {
+  text-align: center;
+  font-size: x-large;
+  margin: 5px;
+}
+
+.AdminPanel .calcList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+}
+
+.AdminPanel .calcList .calcItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border-color: #242424;
+  width: 300px;
+}
+
+.AdminPanel .calcList .calcItem button {
+  width: 250px;
+  margin-bottom: 10px;
+}
+
+.AdminPanel .calcList .calcItem p {
+  font-size: medium;
+}
+
+.AdminPanel button:hover {
+  background-color: #3f3f3f;
+}
+
+.AdminPanel button:active {
+  background-color: #2e2e2e;
+}
+
+@media (max-width: 768px) {
+  .AdminPanel p {
+    font-size: larger;
+  }
+
+  .AdminPanel .calcList {
+    max-width: 100%;
+  }
+}

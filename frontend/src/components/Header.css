@@ -1,0 +1,59 @@
+.Header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #242424;
+  padding-right: 30px;
+  padding-left: 30px;
+  height: 70px;
+}
+
+.Header a {
+  font-size: 30px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.signOutButton,
+.adminButton {
+  margin-left: auto;
+}
+
+.signOutButton button,
+.adminButton {
+  padding: 8px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: white;
+  color: black;
+}
+
+.signOutButton button:hover,
+.adminButton:hover {
+  background-color: #d3dbdb;
+  transition: all 0.1s;
+}
+
+.signOutButton button:active,
+.adminButton:active {
+  background-color: #b5bdbd;
+  transition: all 0.1s;
+}
+
+@media (max-width: 768px) {
+  .Header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    padding: 10px;
+  }
+
+  .AdminButtons {
+    margin: auto;
+    padding-top: 10px;
+  }
+}

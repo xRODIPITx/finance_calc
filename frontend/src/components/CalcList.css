@@ -1,0 +1,43 @@
+.CalcItem {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.CalcItem .btn {
+  border-radius: 10px;
+  border-style: none;
+  font-size: large;
+  color: white;
+  background-color: #242424;
+  padding: 10px;
+  text-align: center;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.CalcItem p {
+  font-size: x-large;
+}
+
+.btn:hover {
+  background-color: #3f3f3f;
+  transition: all 0.1s;
+}
+
+.btn:active {
+  background-color: #2e2e2e;
+  transition: all 0.1s;
+}
+
+@media (max-width: 768px) {
+  .CalcItem {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .CalcItem p {
+    font-size: larger;
+  }
+}
