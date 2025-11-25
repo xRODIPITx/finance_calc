@@ -57,14 +57,10 @@ function CalcInt() {
     } else {
       return (
         <>
-          <p>Стоимость кредита: {result.price} рублей</p>
+          <p>Стоимость кредита: {result.price} руб.</p>
           <p>Общая ставка кредита: {result.commonPercent}%</p>
-          <p>
-            Ежемесячный платёж: {result.sumPerMonth} рублей (без учёта копеек)
-          </p>
-          <p>
-            Необходимый доход: {result.neededMoney} рублей (без учёта копеек)
-          </p>
+          <p>Ежемесячный платёж: {result.sumPerMonth} руб.</p>
+          <p>Необходимый доход: {result.neededMoney} руб.</p>
         </>
       );
     }

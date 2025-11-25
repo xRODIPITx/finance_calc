@@ -75,7 +75,7 @@ function AdminCalcEdit() {
           defaultValue={calc.percent}
         />
         <button id="create" onClick={changeCalc}>
-          Создать
+          Изменить
         </button>
         <Link to="/admin/main" className="returnButton">
           Назад к списку
