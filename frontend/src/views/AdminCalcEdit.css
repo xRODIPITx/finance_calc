@@ -52,7 +52,7 @@
   }
 
   .AdminCalcEdit p,
-  .AdminCalcEdit .to-admin {
+  .AdminCalcEdit .returnButton {
     font-size: larger;
   }
 }
