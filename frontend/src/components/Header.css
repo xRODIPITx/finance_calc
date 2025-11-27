@@ -21,7 +21,7 @@
   margin-left: auto;
 }
 
-.signOutButton button,
+.signOutButton,
 .adminButton {
   padding: 8px;
   border-radius: 10px;
@@ -30,13 +30,13 @@
   color: black;
 }
 
-.signOutButton button:hover,
+.signOutButton:hover,
 .adminButton:hover {
   background-color: #d3dbdb;
   transition: all 0.1s;
 }
 
-.signOutButton button:active,
+.signOutButton:active,
 .adminButton:active {
   background-color: #b5bdbd;
   transition: all 0.1s;

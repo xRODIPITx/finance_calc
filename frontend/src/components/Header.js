@@ -15,14 +15,15 @@ function Header() {
   const signOut = () => {
     localStorage.removeItem("token");
     setIsLoggedIn(false);
+    navigate("/admin");
   };
 
   const AdminButtons = () => {
     if (isLoggedIn === true) {
       return (
-        <div className="signOutButton">
-          <button onClick={signOut}>Выход из аккаунта</button>
-        </div>
+        <button onClick={signOut} className="signOutButton">
+          Выход из аккаунта
+        </button>
       );
     } else {
       return (
