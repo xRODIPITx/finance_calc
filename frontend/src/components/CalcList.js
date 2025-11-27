@@ -9,18 +9,20 @@ function CalcList({ id }) {
     const api = `http://127.0.0.1:9001/calculator/get/one/` + id;
 
     fetch(api)
-      .then((res) => res.json())
+      .then((result) => result.json())
       .then((result) => {
         setCalc(result.data);
       });
-  });
+  }, [id]);
 
   return (
     <div className="CalcItem">
       <p>{calc.calcName}</p>
-      <Link to={`/CalcInt/${calc._id}`} className="btn">
-        Открыть
-      </Link>
+      {calc._id && (
+        <Link to={`/CalcInt/${calc._id}`} className="btn">
+          Открыть
+        </Link>
+      )}
     </div>
   );
 }
