@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <div className="Footer">
-      {year} {siteName}
+      © {year} {siteName}
     </div>
   );
 }
