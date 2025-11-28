@@ -42,7 +42,7 @@ function Header() {
   return (
     <div className="Header">
       <a onClick={signOut} href="/">
-        Финансовый калькулятор
+        Финансовые калькуляторы
       </a>
       <AdminButtons />
     </div>
