@@ -51,14 +51,14 @@ function CalcInt() {
     if (result.price <= 0 || result.time <= 0) {
       return (
         <>
-          <p>Заполните все поля для выполнения расчета</p>
+          <p>Проверьте правильность заполнения полей</p>
         </>
       );
     } else {
       return (
         <>
-          <p>Стоимость кредита: {result.price} руб.</p>
-          <p>Общая ставка кредита: {result.commonPercent}%</p>
+          <p>Сумма кредита: {result.price} руб.</p>
+          <p>Общая ставка кредита: {result.commonPercent}</p>
           <p>Ежемесячный платёж: {result.sumPerMonth} руб.</p>
           <p>Необходимый доход: {result.neededMoney} руб.</p>
         </>
@@ -70,7 +70,7 @@ function CalcInt() {
     <>
       <Header />
       <div className="CalcInt">
-        <p>{calc.CalcName}</p>
+        <p>{calc.calcName}</p>
         <input id="sum" type="number" placeholder="Сумма (руб)" />
         <input id="time" type="number" placeholder="Продолжительность (лет)" />
         <input
