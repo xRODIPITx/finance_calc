@@ -25,8 +25,8 @@ function CalcList() {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>Загрузка...</p>;
-  if (error) return <p>Ошибка: {error}</p>;
+  if (loading) return <p className="errorMessage">Загрузка...</p>;
+  if (error) return <p className="errorMessage">Ошибка: {error}</p>;
 
   return (
     <div className="CalcList">

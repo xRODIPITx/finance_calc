@@ -17,7 +17,8 @@
   text-decoration: none;
 }
 
-.CalcItem p {
+.CalcList p,
+.errorMessage {
   font-size: x-large;
 }
 
@@ -37,7 +38,8 @@
     flex-direction: column;
   }
 
-  .CalcItem p {
+  .CalcList p,
+  .errorMessage {
     font-size: larger;
   }
 }
