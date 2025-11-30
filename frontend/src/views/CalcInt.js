@@ -13,6 +13,7 @@ function CalcInt() {
     sumPerMonth: 0,
     neededMoney: 0,
   });
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const api = `http://127.0.0.1:9001/calculator/get/one/` + id;
@@ -20,8 +21,14 @@ function CalcInt() {
     fetch(api)
       .then((res) => res.json())
       .then((result) => {
-        // console.debug(result)
+        if (!result.data) {
+          setError("Калькулятор не найден");
+          return;
+        }
         setCalc(result.data);
+      })
+      .catch(() => {
+        setError("Ошибка загрузки данных");
       });
   }, [id]);
 
@@ -65,6 +72,18 @@ function CalcInt() {
       );
     }
   };
+
+  if (error) {
+    return (
+      <>
+        <Header />
+        <div className="CalcInt">
+          <p className="error">{error}</p>
+        </div>
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>
