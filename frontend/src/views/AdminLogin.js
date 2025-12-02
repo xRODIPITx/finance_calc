@@ -15,7 +15,7 @@ function AdminLogin({ setToken }) {
     const login = document.getElementById("login").value;
     const password = document.getElementById("password").value;
 
-    if (password.length === 0) {
+    if (password.length === 0 || login.length === 0) {
       document.getElementById("message").innerText = "Ошибка ввода данных";
       return;
     }
@@ -28,45 +28,36 @@ function AdminLogin({ setToken }) {
       });
 
       if (response.status === 400) {
-        document.getElementById("message").innerText = "Ошибка в вводе данных";
-        return;
-      }
-
-      if (!response.ok) {
         document.getElementById("message").innerText =
           "Неверный логин или пароль";
         return;
       }
 
-      navigate("/admin/main");
+      if (response.status === 404) {
+        document.getElementById("message").innerText = "Сервер не найден";
+        return;
+      }
+
+      if (!response.ok) {
+        document.getElementById("message").innerText = "Ошибка авторизации";
+        return;
+      }
+
+      const data = await response.json();
+
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+        setToken(data.token);
+        navigate("/admin/main");
+      } else {
+        document.getElementById("message").innerText =
+          "Ошибка: сервер не вернул токен";
+      }
     } catch (err) {
       console.error(err);
       document.getElementById("message").innerText =
         "Ошибка подключения к серверу";
     }
-
-    const data = {
-      login: login,
-      password: password,
-    };
-
-    const api = "http://localhost:9001/login";
-
-    fetch(api, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((result) => result.json())
-      .then((result) => {
-        if (result.token !== undefined) {
-          localStorage.setItem("token", result.token);
-          setToken(result.token);
-          navigate("/admin/main");
-        }
-      });
   };
 
   return (
