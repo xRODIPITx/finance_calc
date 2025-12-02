@@ -18,7 +18,7 @@
 }
 
 .CalcList p,
-.errorMessage {
+.message {
   font-size: x-large;
 }
 
@@ -39,7 +39,7 @@
   }
 
   .CalcList p,
-  .errorMessage {
+  .message {
     font-size: larger;
   }
 }
